@@ -1014,7 +1014,7 @@ section { scroll-margin-top: 76px; }
 .chef-bg {
   position: absolute;
   inset: 0;
-  background: url("../img/grill.jpg") center 42% / cover no-repeat;
+  background: url("../img/gallery/gallery-02.jpg") center 42% / cover no-repeat;
   transform: scale(1.06);
 }
 
