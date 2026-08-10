@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>失眠烧鸟 · 深夜炭火居酒屋</title>
-  <meta name="description" content="失眠烧鸟——开在深夜的炭火居酒屋。睡不着的时候，来吃一串入魂的烧鸟，喝一杯清酒。营业至凌晨两点。">
+  <meta name="description" content="失眠烧鸟——开在深夜的炭火居酒屋。睡不着的时候，来吃一串入魂的烧鸟，喝一杯清酒。营业至凌晨一点。">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext y='48' font-size='48'%3E%F0%9F%8F%AE%3C/text%3E%3C/svg%3E">
   <link rel="stylesheet" href="assets/css/style.css">
   <script>document.documentElement.classList.add('js');</script>
@@ -43,7 +43,6 @@
         <a href="#signature">镇店之味</a>
         <a href="#menu">菜单</a>
         <a href="#chef">匠人</a>
-        <a href="#gallery">空间</a>
         <a href="#visit">到店指南</a>
       </nav>
 
@@ -67,7 +66,7 @@
       <div class="hero-veil"></div>
       <canvas id="embers" aria-hidden="true"></canvas>
 
-      <p class="hero-tate tate-left">深夜二時まで営業</p>
+      <p class="hero-tate tate-left">深夜一時まで営業</p>
       <p class="hero-tate tate-right">焼き鳥・居酒屋</p>
 
       <div class="hero-content container">
@@ -75,15 +74,15 @@
         <h1 class="hero-title">失眠<span>烧鸟</span></h1>
         <p class="hero-jp">しつみん やきとり</p>
         <p class="hero-tagline">睡不着的人，<br class="mob">今晚都在这里。</p>
-        <p class="hero-sub">备长炭烤到深夜两点 / 三十余种串物 / 十七款清酒</p>
+        <p class="hero-sub">备长炭烤到凌晨一点 / 三十余种串物 / 十七款清酒</p>
         <div class="hero-cta">
           <a class="btn btn-primary" href="#menu">今晚吃什么</a>
           <a class="btn btn-outline" href="#visit">预约订座</a>
         </div>
         <div class="hero-meta">
-          <span>17:00 — 02:00</span>
+          <span>11:00-14:00 / 17:00-01:00</span>
           <i></i>
-          <span>梅雨町四丁目 6-18</span>
+          <span>湖州市田盛街水乐坊2幢</span>
         </div>
       </div>
 
@@ -138,7 +137,7 @@
           <p class="reveal">我们没有复杂的规矩，只有三件事：<b>用好炭，烤好串，陪你把夜喝完。</b>一串入魂，一杯见底，夜再长，也有人陪你坐。</p>
 
           <div class="about-stats reveal">
-            <div><strong>17:00</strong><span>开始营业</span></div>
+            <div><strong>11:00</strong><span>午市开启</span></div>
             <div><strong>32</strong><span>种串物</span></div>
             <div><strong>17</strong><span>款清酒</span></div>
           </div>
@@ -146,7 +145,7 @@
           <div class="about-sign reveal">
             <span class="seal" aria-hidden="true">焼</span>
             <div>
-              <p class="sign-name">店主 · 阿木</p>
+              <p class="sign-name">店主 · 小陈</p>
               <p class="sign-desc">曾在东京新宿的烧鸟店修行十二年，把一根串烤明白，是他唯一擅长的事。</p>
             </div>
           </div>
@@ -236,35 +235,8 @@
       <div class="chef-content container reveal">
         <span class="chef-seal" aria-hidden="true">串</span>
         <p class="chef-quote">一串入魂<br>一生悬命</p>
-        <p class="chef-name">— 店主 阿木 · 十二年烧鸟修行 —</p>
+        <p class="chef-name">— 店主 小陈 · 十二年烧鸟修行 —</p>
         <p class="chef-desc">从东京新宿的小店，到这座城市的小巷。火候、酱汁、盐量，每天重复一千次，只为你在深夜咬下第一口时，听见炭火的声音。</p>
-      </div>
-    </section>
-
-    <!-- 空间 -->
-    <section class="gallery" id="gallery">
-      <div class="container">
-        <div class="section-head between reveal">
-          <div>
-            <p class="eyebrow">くうかん · 深夜空间</p>
-            <h2 class="section-title">巷子深处的光</h2>
-          </div>
-          <div class="gallery-nav">
-            <button class="g-arrow" id="gPrev" type="button" aria-label="上一组图片">←</button>
-            <button class="g-arrow" id="gNext" type="button" aria-label="下一组图片">→</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="gallery-track" id="galleryTrack" tabindex="0" aria-label="店面与料理图片，可横向滚动">
-        <figure><img src="assets/img/shop.jpg" alt="街边的烧鸟店门口"><figcaption>巷口 · 暖帘升起</figcaption></figure>
-        <figure><img src="assets/img/izakaya.jpg" alt="居酒屋的吧台与酒瓶"><figcaption>吧台 · 一人一位</figcaption></figure>
-        <figure><img src="assets/img/feast.jpg" alt="摆满料理的居酒屋餐桌"><figcaption>深夜 · 一桌人间</figcaption></figure>
-        <figure><img src="assets/img/oden.jpg" alt="冒着热气的关东煮"><figcaption>炉上 · 关东煮咕嘟作响</figcaption></figure>
-        <figure><img src="assets/img/sushi.jpg" alt="深夜灯光下的寿司"><figcaption>案前 · 当日鲜鱼</figcaption></figure>
-        <figure><img src="assets/img/maki.jpg" alt="寿司卷与蘸碟"><figcaption>手作 · 卷物</figcaption></figure>
-        <figure><img src="assets/img/yakitori-2.jpg" alt="炭火烤制的烧鸟串"><figcaption>炭上 · 油脂滴落</figcaption></figure>
-        <figure><img src="assets/img/table.jpg" alt="一桌日式料理与清酒"><figcaption>席间 · 慢慢吃</figcaption></figure>
       </div>
     </section>
 
@@ -279,28 +251,28 @@
             <li>
               <span class="v-label">营业时间</span>
               <div class="v-value">
-                <p>周一至周四 <b>17:00 — 24:00</b></p>
-                <p>周五至周日 <b>17:00 — 02:00</b></p>
+                <p>午市 <b>11:00 — 14:00</b></p>
+                <p>晚市 <b>17:00 — 次日 01:00</b></p>
               </div>
             </li>
             <li>
               <span class="v-label">地址</span>
-              <div class="v-value">梅雨町四丁目 6-18 一木大厦一层</div>
+              <div class="v-value">湖州市田盛街水乐坊2幢</div>
             </li>
             <li>
               <span class="v-label">电话</span>
-              <div class="v-value"><a href="tel:010-6666-8888">010-6666-8888</a></div>
+              <div class="v-value"><a href="tel:13216174505">13216174505</a></div>
             </li>
             <li>
               <span class="v-label">微信</span>
-              <div class="v-value">shimian-shaoniao</div>
+              <div class="v-value">smsn5888</div>
             </li>
           </ul>
 
           <div class="map-card reveal" aria-hidden="true">
             <div class="map-grid"></div>
             <div class="map-pin"><span></span><em>失眠烧鸟</em></div>
-            <div class="map-tag">梅雨町 · 一木大厦</div>
+            <div class="map-tag">田盛街 · 水乐坊</div>
           </div>
 
           <p class="visit-tip reveal">温馨提示：深夜十二点后仅保留六桌，建议提前订座。</p>
@@ -389,12 +361,11 @@
         <a href="#about">关于我们</a>
         <a href="#menu">菜单</a>
         <a href="#visit">预约订座</a>
-        <a href="#gallery">空间</a>
       </nav>
       <div class="footer-contact">
-        <p>梅雨町四丁目 6-18 一木大厦一层</p>
-        <p><a href="tel:010-6666-8888">010-6666-8888</a> · shimian-shaoniao</p>
-        <p class="footer-hours">周一至周四 17:00-24:00 / 周五至周日 17:00-02:00</p>
+        <p>湖州市田盛街水乐坊2幢</p>
+        <p><a href="tel:13216174505">13216174505</a> · smsn5888</p>
+        <p class="footer-hours">午市 11:00-14:00 / 晚市 17:00-次日01:00</p>
       </div>
     </div>
     <div class="container footer-bottom">

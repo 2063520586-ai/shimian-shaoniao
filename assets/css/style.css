@@ -89,7 +89,6 @@ ul { list-style: none; }
 
 .section-head { margin-bottom: 64px; }
 .section-head.center { text-align: center; }
-.section-head.between { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; }
 .section-desc { margin-top: 16px; color: var(--muted); font-size: 15px; letter-spacing: .08em; }
 
 section { scroll-margin-top: 76px; }
@@ -1072,70 +1071,6 @@ section { scroll-margin-top: 76px; }
   letter-spacing: .06em;
 }
 
-/* ---------- 空间画廊 ---------- */
-
-.gallery { padding: 120px 0; background: var(--bg-soft); border-top: 1px solid var(--line); }
-
-.gallery-nav { display: flex; gap: 12px; }
-
-.g-arrow {
-  width: 46px;
-  height: 46px;
-  border: 1px solid var(--line-strong);
-  background: transparent;
-  color: var(--amber);
-  font-size: 18px;
-  transition: background .3s, color .3s, border-color .3s;
-}
-
-.g-arrow:hover { background: var(--amber); color: #190e06; border-color: var(--amber); }
-
-.gallery-track {
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: clamp(240px, 28vw, 380px);
-  gap: 18px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  padding: 8px max(24px, calc((100vw - 1200px) / 2)) 26px;
-  scrollbar-width: none;
-}
-
-.gallery-track::-webkit-scrollbar { display: none; }
-
-.gallery-track figure {
-  scroll-snap-align: center;
-  position: relative;
-  border-radius: 2px;
-  overflow: hidden;
-  border: 1px solid var(--line);
-  transition: transform .5s var(--ease), box-shadow .5s;
-}
-
-.gallery-track figure:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 24px 50px -22px rgba(0, 0, 0, .9);
-}
-
-.gallery-track img {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  transition: transform .8s var(--ease);
-}
-
-.gallery-track figure:hover img { transform: scale(1.07); }
-
-.gallery-track figcaption {
-  position: absolute;
-  inset: auto 0 0 0;
-  padding: 40px 16px 12px;
-  background: linear-gradient(180deg, transparent, rgba(11, 9, 8, .9));
-  font-size: 12px;
-  letter-spacing: .24em;
-  color: var(--ink-dim);
-}
-
 /* ---------- 到店指南 ---------- */
 
 .visit { padding: 120px 0; position: relative; overflow: hidden; }
@@ -1554,7 +1489,7 @@ section { scroll-margin-top: 76px; }
   .mob { display: inline; }
   .mob::after { content: ""; display: block; }
 
-  .about, .signature, .menu-section, .gallery, .visit { padding: 84px 0; }
+  .about, .signature, .menu-section, .visit { padding: 84px 0; }
 
   .about-photo.main { width: 100%; }
   .about-photo.float { right: 0; bottom: -38px; width: 52%; }
@@ -1568,10 +1503,6 @@ section { scroll-margin-top: 76px; }
   .menu-tab { flex: 1 1 42%; padding: 12px 10px; }
   .menu-list { grid-template-columns: 1fr; }
   .menu-feature-info h3 { font-size: 22px; }
-
-  .section-head.between { flex-direction: column; align-items: flex-start; }
-
-  .gallery-track { grid-auto-columns: 76vw; }
 
   .form-row.two { grid-template-columns: 1fr; }
   .v-label { width: 64px; }
