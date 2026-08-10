@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>失眠烧鸟 · 深夜炭火居酒屋</title>
+  <meta name="description" content="失眠烧鸟——开在深夜的炭火居酒屋。睡不着的时候，来吃一串入魂的烧鸟，喝一杯清酒。营业至凌晨两点。">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext y='48' font-size='48'%3E%F0%9F%8F%AE%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+  <!-- 预载动画 -->
+  <div id="preloader" aria-hidden="true">
+    <div class="pre-lantern">
+      <span class="lantern-string"></span>
+      <span class="lantern"></span>
+    </div>
+    <p class="pre-title">失眠<b>烧鸟</b></p>
+    <p class="pre-sub">夜未眠 · 炭火起</p>
+  </div>
+
+  <!-- 氛围光斑 -->
+  <div id="cursor-glow" aria-hidden="true"></div>
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- 导航 -->
+  <header id="header">
+    <div class="nav container">
+      <a class="brand" href="#hero" aria-label="失眠烧鸟 首页">
+        <svg class="brand-mark" viewBox="0 0 44 56" aria-hidden="true">
+          <path d="M22 4v8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <ellipse cx="22" cy="30" rx="15" ry="20" fill="currentColor"/>
+          <ellipse cx="22" cy="30" rx="15" ry="20" fill="none" stroke="#160d06" stroke-width="1.6" opacity=".55"/>
+          <path d="M10 22c8 3 16 3 24 0M9 31c8 3 18 3 26 0M12 40c7 2 13 2 20 0" stroke="#160d06" stroke-width="1.4" fill="none" opacity=".45"/>
+        </svg>
+        <span class="brand-text">失眠<b>焼鳥</b><small>INSOMNIA YAKITORI</small></span>
+      </a>
+
+      <nav class="nav-links" id="navLinks" aria-label="主导航">
+        <a href="#about">关于我们</a>
+        <a href="#signature">镇店之味</a>
+        <a href="#menu">菜单</a>
+        <a href="#chef">匠人</a>
+        <a href="#gallery">空间</a>
+        <a href="#visit">到店指南</a>
+      </nav>
+
+      <div class="nav-actions">
+        <span class="open-flag"><i></i>营业中</span>
+        <a class="btn btn-outline btn-sm nav-book" href="#visit">预约订座</a>
+        <button class="burger" id="burger" type="button" aria-label="打开菜单" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Hero -->
+    <section class="hero" id="hero">
+      <div class="hero-bg">
+        <img src="assets/img/hero.jpg" alt="夜色中挂着红灯笼的居酒屋门面">
+      </div>
+      <div class="hero-veil"></div>
+      <canvas id="embers" aria-hidden="true"></canvas>
+
+      <p class="hero-tate tate-left">深夜二時まで営業</p>
+      <p class="hero-tate tate-right">焼き鳥・居酒屋</p>
+
+      <div class="hero-content container">
+        <p class="hero-kicker">深夜炭火居酒屋 · SINCE 2018</p>
+        <h1 class="hero-title">失眠<span>烧鸟</span></h1>
+        <p class="hero-jp">しつみん やきとり</p>
+        <p class="hero-tagline">睡不着的人，<br class="mob">今晚都在这里。</p>
+        <p class="hero-sub">备长炭烤到深夜两点 / 三十余种串物 / 十七款清酒</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#menu">今晚吃什么</a>
+          <a class="btn btn-outline" href="#visit">预约订座</a>
+        </div>
+        <div class="hero-meta">
+          <span>17:00 — 02:00</span>
+          <i></i>
+          <span>梅雨町四丁目 6-18</span>
+        </div>
+      </div>
+
+      <div class="scroll-hint" aria-hidden="true">
+        <span></span>
+        <em>向下滚动</em>
+      </div>
+    </section>
+
+    <!-- 走马灯 -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>もも 鸡腿肉串</span><i>・</i>
+        <span>つくね 鸡肉丸</span><i>・</i>
+        <span>ねぎま 葱段鸡串</span><i>・</i>
+        <span>たん 盐烤牛舌</span><i>・</i>
+        <span>さしみ 刺身盛り合わせ</span><i>・</i>
+        <span>おでん 关东煮</span><i>・</i>
+        <span>さけ 清酒</span><i>・</i>
+        <span>らーめん 深夜拉面</span><i>・</i>
+        <span>もも 鸡腿肉串</span><i>・</i>
+        <span>つくね 鸡肉丸</span><i>・</i>
+        <span>ねぎま 葱段鸡串</span><i>・</i>
+        <span>たん 盐烤牛舌</span><i>・</i>
+        <span>さしみ 刺身盛り合わせ</span><i>・</i>
+        <span>おでん 关东煮</span><i>・</i>
+        <span>さけ 清酒</span><i>・</i>
+        <span>らーめん 深夜拉面</span><i>・</i>
+      </div>
+    </div>
+
+    <!-- 品牌故事 -->
+    <section class="about" id="about">
+      <div class="container about-grid">
+        <div class="about-media reveal">
+          <div class="about-photo main">
+            <img src="assets/img/story.jpg" alt="京都居酒屋内的暖黄灯光与吧台">
+          </div>
+          <div class="about-photo float">
+            <img src="assets/img/table.jpg" alt="居酒屋餐桌上的一桌料理">
+          </div>
+          <div class="about-badge">
+            <strong>2018</strong>
+            <span>开炉至今</span>
+          </div>
+        </div>
+
+        <div class="about-text">
+          <p class="eyebrow reveal">眠れない夜へ · 献给不眠夜</p>
+          <h2 class="section-title reveal">献给每一个<br>失眠的夜晚</h2>
+          <p class="reveal">失眠烧鸟开在一条不肯早睡的小巷里。白天它是一扇安静的暖帘，入夜之后，炭火亮起，烟雾升起，<b>这里是全城失眠者的收容所。</b></p>
+          <p class="reveal">我们没有复杂的规矩，只有三件事：<b>用好炭，烤好串，陪你把夜喝完。</b>一串入魂，一杯见底，夜再长，也有人陪你坐。</p>
+
+          <div class="about-stats reveal">
+            <div><strong>17:00</strong><span>开始营业</span></div>
+            <div><strong>32</strong><span>种串物</span></div>
+            <div><strong>17</strong><span>款清酒</span></div>
+          </div>
+
+          <div class="about-sign reveal">
+            <span class="seal" aria-hidden="true">焼</span>
+            <div>
+              <p class="sign-name">店主 · 阿木</p>
+              <p class="sign-desc">曾在东京新宿的烧鸟店修行十二年，把一根串烤明白，是他唯一擅长的事。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 镇店之味 -->
+    <section class="signature" id="signature">
+      <div class="container">
+        <div class="section-head center reveal">
+          <p class="eyebrow">おもてなし · 款待之心</p>
+          <h2 class="section-title">镇店之味</h2>
+          <p class="section-desc">三件小事，我们坚持了七年</p>
+        </div>
+
+        <div class="sig-grid">
+          <article class="sig-card reveal">
+            <div class="sig-img">
+              <img src="assets/img/grill.jpg" alt="厨师在炭火前翻转烧鸟串">
+              <span class="sig-num">01</span>
+            </div>
+            <div class="sig-body">
+              <h3>备长炭直烤</h3>
+              <p>只用纪州备长炭，温度稳定近千度，串物外脆内嫩，带着炭火独有的香气。</p>
+            </div>
+          </article>
+
+          <article class="sig-card reveal">
+            <div class="sig-img">
+              <img src="assets/img/sashimi.jpg" alt="新鲜刺身拼盘">
+              <span class="sig-num">02</span>
+            </div>
+            <div class="sig-body">
+              <h3>当日鲜鱼</h3>
+              <p>清晨到港的鱼，傍晚出现在案板上。菜单随季节而变，卖完即止，不讲情面。</p>
+            </div>
+          </article>
+
+          <article class="sig-card reveal">
+            <div class="sig-img">
+              <img src="assets/img/sake.jpg" alt="两杯清酒与酒瓶">
+              <span class="sig-num">03</span>
+            </div>
+            <div class="sig-body">
+              <h3>深夜酒场</h3>
+              <p>十七款清酒从淡丽到醇厚，不懂酒也没关系，告诉师傅今晚的心情就好。</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 菜单 -->
+    <section class="menu-section" id="menu">
+      <div class="container">
+        <div class="section-head center reveal">
+          <p class="eyebrow">こんだて · 深夜菜单</p>
+          <h2 class="section-title">今晚吃什么</h2>
+          <p class="section-desc">炭火不熄，菜单随心情与季节流动</p>
+        </div>
+
+        <div class="menu-tabs reveal" id="menuTabs" role="tablist" aria-label="菜单分类">
+          <!-- 由 JS 渲染 -->
+        </div>
+
+        <div class="menu-body reveal" id="menuBody">
+          <figure class="menu-feature" id="menuFeature">
+            <img id="menuFeatureImg" src="" alt="">
+            <figcaption class="menu-feature-info">
+              <span class="menu-feature-jp" id="menuFeatureJp"></span>
+              <h3 id="menuFeatureName"></h3>
+              <p id="menuFeatureDesc"></p>
+            </figcaption>
+          </figure>
+          <ul class="menu-list" id="menuList"></ul>
+        </div>
+
+        <p class="menu-note">* 部分食材每日限量，以当日实际供应为准。</p>
+      </div>
+    </section>
+
+    <!-- 匠人 -->
+    <section class="chef" id="chef">
+      <div class="chef-bg" aria-hidden="true"></div>
+      <div class="chef-veil" aria-hidden="true"></div>
+      <div class="chef-content container reveal">
+        <span class="chef-seal" aria-hidden="true">串</span>
+        <p class="chef-quote">一串入魂<br>一生悬命</p>
+        <p class="chef-name">— 店主 阿木 · 十二年烧鸟修行 —</p>
+        <p class="chef-desc">从东京新宿的小店，到这座城市的小巷。火候、酱汁、盐量，每天重复一千次，只为你在深夜咬下第一口时，听见炭火的声音。</p>
+      </div>
+    </section>
+
+    <!-- 空间 -->
+    <section class="gallery" id="gallery">
+      <div class="container">
+        <div class="section-head between reveal">
+          <div>
+            <p class="eyebrow">くうかん · 深夜空间</p>
+            <h2 class="section-title">巷子深处的光</h2>
+          </div>
+          <div class="gallery-nav">
+            <button class="g-arrow" id="gPrev" type="button" aria-label="上一组图片">←</button>
+            <button class="g-arrow" id="gNext" type="button" aria-label="下一组图片">→</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-track" id="galleryTrack" tabindex="0" aria-label="店面与料理图片，可横向滚动">
+        <figure><img src="assets/img/shop.jpg" alt="街边的烧鸟店门口"><figcaption>巷口 · 暖帘升起</figcaption></figure>
+        <figure><img src="assets/img/izakaya.jpg" alt="居酒屋的吧台与酒瓶"><figcaption>吧台 · 一人一位</figcaption></figure>
+        <figure><img src="assets/img/feast.jpg" alt="摆满料理的居酒屋餐桌"><figcaption>深夜 · 一桌人间</figcaption></figure>
+        <figure><img src="assets/img/oden.jpg" alt="冒着热气的关东煮"><figcaption>炉上 · 关东煮咕嘟作响</figcaption></figure>
+        <figure><img src="assets/img/sushi.jpg" alt="深夜灯光下的寿司"><figcaption>案前 · 当日鲜鱼</figcaption></figure>
+        <figure><img src="assets/img/maki.jpg" alt="寿司卷与蘸碟"><figcaption>手作 · 卷物</figcaption></figure>
+        <figure><img src="assets/img/yakitori-2.jpg" alt="炭火烤制的烧鸟串"><figcaption>炭上 · 油脂滴落</figcaption></figure>
+        <figure><img src="assets/img/table.jpg" alt="一桌日式料理与清酒"><figcaption>席间 · 慢慢吃</figcaption></figure>
+      </div>
+    </section>
+
+    <!-- 到店指南 + 订座 -->
+    <section class="visit" id="visit">
+      <div class="container visit-grid">
+        <div class="visit-info">
+          <p class="eyebrow reveal">ご来店 · 到店指南</p>
+          <h2 class="section-title reveal">来找我们</h2>
+
+          <ul class="visit-list reveal">
+            <li>
+              <span class="v-label">营业时间</span>
+              <div class="v-value">
+                <p>周一至周四 <b>17:00 — 24:00</b></p>
+                <p>周五至周日 <b>17:00 — 02:00</b></p>
+              </div>
+            </li>
+            <li>
+              <span class="v-label">地址</span>
+              <div class="v-value">梅雨町四丁目 6-18 一木大厦一层</div>
+            </li>
+            <li>
+              <span class="v-label">电话</span>
+              <div class="v-value"><a href="tel:010-6666-8888">010-6666-8888</a></div>
+            </li>
+            <li>
+              <span class="v-label">微信</span>
+              <div class="v-value">shimian-shaoniao</div>
+            </li>
+          </ul>
+
+          <div class="map-card reveal" aria-hidden="true">
+            <div class="map-grid"></div>
+            <div class="map-pin"><span></span><em>失眠烧鸟</em></div>
+            <div class="map-tag">梅雨町 · 一木大厦</div>
+          </div>
+
+          <p class="visit-tip reveal">温馨提示：深夜十二点后仅保留六桌，建议提前订座。</p>
+        </div>
+
+        <div class="visit-form-wrap reveal">
+          <form id="reserveForm" class="reserve-form" novalidate>
+            <div class="form-head">
+              <span class="form-jp">ごよやく</span>
+              <h3>预约订座</h3>
+              <p>告诉我们几点来，炭火先替你热着。</p>
+            </div>
+
+            <div class="form-row">
+              <label for="rName">称呼 <em>*</em></label>
+              <input id="rName" name="name" type="text" placeholder="怎么称呼您" autocomplete="name" required>
+            </div>
+
+            <div class="form-row">
+              <label for="rPhone">手机号 <em>*</em></label>
+              <input id="rPhone" name="phone" type="tel" placeholder="用于到店确认" autocomplete="tel" required>
+            </div>
+
+            <div class="form-row two">
+              <div>
+                <label for="rDate">日期 <em>*</em></label>
+                <input id="rDate" name="date" type="date" required>
+              </div>
+              <div>
+                <label for="rTime">时间 <em>*</em></label>
+                <select id="rTime" name="time" required>
+                  <option value="" selected disabled>选择时间</option>
+                  <option>17:00</option><option>18:00</option><option>19:00</option>
+                  <option>20:00</option><option>21:00</option><option>22:00</option>
+                  <option>23:00</option><option>00:00</option><option>01:00</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row two">
+              <div>
+                <label for="rGuests">人数</label>
+                <select id="rGuests" name="guests">
+                  <option>1 人</option><option selected>2 人</option><option>3 人</option>
+                  <option>4 人</option><option>5 人</option><option>6 人以上</option>
+                </select>
+              </div>
+              <div>
+                <label for="rSeat">座位</label>
+                <select id="rSeat" name="seat">
+                  <option selected>随便，有串就行</option>
+                  <option>吧台位</option><option>窗边位</option><option>包间</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <label for="rNote">备注</label>
+              <textarea id="rNote" name="note" rows="3" placeholder="忌口、过敏原、想留的酒……"></textarea>
+            </div>
+
+            <button class="btn btn-primary btn-block" type="submit">确认预约</button>
+            <p class="form-agree">预约成功后将收到短信确认，如超时未到会保留十五分钟。</p>
+          </form>
+
+          <div class="reserve-success" id="reserveSuccess" hidden>
+            <span class="success-mark" aria-hidden="true">✓</span>
+            <h3>炭火已为你热上</h3>
+            <p id="successSummary"></p>
+            <button class="btn btn-outline" id="reserveAgain" type="button">再订一桌</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 页脚 -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <p class="footer-logo">失眠<b>焼鳥</b></p>
+        <p class="footer-slogan">夜越深，味越浓。<br>睡不着的时候，这里还亮着灯。</p>
+      </div>
+      <nav class="footer-nav" aria-label="页脚导航">
+        <a href="#about">关于我们</a>
+        <a href="#menu">菜单</a>
+        <a href="#visit">预约订座</a>
+        <a href="#gallery">空间</a>
+      </nav>
+      <div class="footer-contact">
+        <p>梅雨町四丁目 6-18 一木大厦一层</p>
+        <p><a href="tel:010-6666-8888">010-6666-8888</a> · shimian-shaoniao</p>
+        <p class="footer-hours">周一至周四 17:00-24:00 / 周五至周日 17:00-02:00</p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© <span id="year">2026</span> 失眠烧鸟 · 深夜炭火居酒屋</p>
+      <p class="credit">菜品与场景图片来自 Wikimedia Commons 共享图库，仅用于展示</p>
+    </div>
+  </footer>
+
+  <button id="toTop" type="button" aria-label="回到顶部">↑</button>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

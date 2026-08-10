@@ -1,0 +1,10 @@
+# 本地发布脚本与运行数据不入库
+.run/
+preview/
+*.ps1
+serve_site.py
+
+# 系统文件
+Thumbs.db
+Desktop.ini
+.DS_Store
