@@ -428,6 +428,23 @@
     }
   }
 
+  /* ---------- 实景相册滚动 ---------- */
+  function initGallery() {
+    var track = $("#galleryTrack");
+    var prev = $("#gPrev");
+    var next = $("#gNext");
+    if (!track) return;
+
+    var scrollByCard = function (dir) {
+      var first = track.querySelector("figure");
+      var amount = first ? (first.getBoundingClientRect().width + 18) * 2 * dir : 400 * dir;
+      track.scrollBy({ left: amount, behavior: prefersReduced ? "auto" : "smooth" });
+    };
+
+    if (prev) prev.addEventListener("click", function () { scrollByCard(-1); });
+    if (next) next.addEventListener("click", function () { scrollByCard(1); });
+  }
+
   /* ---------- 导航高亮 ---------- */
   function initNavSpy() {
     var links = $$("#navLinks a");
@@ -466,6 +483,7 @@
     initEmbers();
     initReveal();
     renderMenu();
+    initGallery();
     initForm();
     initNavSpy();
     initYear();
